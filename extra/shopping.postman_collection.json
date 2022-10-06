@@ -1,0 +1,368 @@
+{
+	"info": {
+		"_postman_id": "d7040fd6-d7f2-4a47-9f1f-8583fb42c2f4",
+		"name": "shopping",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21813375"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"lina\",\r\n    \"email\": \"lina@gmail.com\",\r\n    \"password\":\"23!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}user/signUp",
+							"host": [
+								"{{URL}}user"
+							],
+							"path": [
+								"signUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}user/getUser/1",
+							"host": [
+								"{{URL}}user"
+							],
+							"path": [
+								"getUser",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Lena\",\r\n    \"email\":\"lena@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}user/Edit/1",
+							"host": [
+								"{{URL}}user"
+							],
+							"path": [
+								"Edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUSer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}user/Delete/2",
+							"host": [
+								"{{URL}}user"
+							],
+							"path": [
+								"Delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}user/allUsers",
+							"host": [
+								"{{URL}}user"
+							],
+							"path": [
+								"allUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"lena@gmail.com\",\r\n    \"password\":\"23!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}user/login",
+							"host": [
+								"{{URL}}user"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "getproduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkxlbmEiLCJyb2xlIjoidXNlciIsImlhdCI6MTY2NTA0ODUxNSwiZXhwIjoxNjY1MDUwMzE1fQ.UhsDdv14YX31VA7wRpvykgG_wX8a9JNizK04-wkD9uM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}product/getProduct/1",
+							"host": [
+								"{{URL}}product"
+							],
+							"path": [
+								"getProduct",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getallproducts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkxlbmEiLCJyb2xlIjoidXNlciIsImlhdCI6MTY2NTA0ODUxNSwiZXhwIjoxNjY1MDUwMzE1fQ.UhsDdv14YX31VA7wRpvykgG_wX8a9JNizK04-wkD9uM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}product/getAllProducts",
+							"host": [
+								"{{URL}}product"
+							],
+							"path": [
+								"getAllProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditProduct",
+					"protocolProfileBehavior": {
+						"followAuthorizationHeader": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkxlbmEiLCJyb2xlIjoidXNlciIsImlhdCI6MTY2NTA0ODUxNSwiZXhwIjoxNjY1MDUwMzE1fQ.UhsDdv14YX31VA7wRpvykgG_wX8a9JNizK04-wkD9uM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\":\"phone\",\r\n    \"description\":\"newly added\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}product/editProduct/1",
+							"host": [
+								"{{URL}}product"
+							],
+							"path": [
+								"editProduct",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6ImxpbiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjY1MDM3NDUwLCJleHAiOjE2NjUwMzkyNTB9.891h5_ydGm1u8UTfzaPgve9J0k38CAn9N3ZphwPUEcg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}product/deleteProduct/1",
+							"host": [
+								"{{URL}}product"
+							],
+							"path": [
+								"deleteProduct",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkxlbmEiLCJyb2xlIjoidXNlciIsImlhdCI6MTY2NTA0ODUxNSwiZXhwIjoxNjY1MDUwMzE1fQ.UhsDdv14YX31VA7wRpvykgG_wX8a9JNizK04-wkD9uM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\": \"keyboard\",\r\n    \"description\": \"amazing keyboard\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}product/create",
+							"host": [
+								"{{URL}}product"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pagination",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImxpbiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjY1MDQ4MDY3LCJleHAiOjE2NjUwNDk4Njd9.WA-600Rjc0zir0RDnfjWFN15okpm1BgF4yy5rm5Y4Ck",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}product/productPage?page=1&limits=2",
+							"host": [
+								"{{URL}}product"
+							],
+							"path": [
+								"productPage"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limits",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8000/"
+		},
+		{
+			"key": "URL",
+			"value": "http://localhost:8000/"
+		}
+	]
+}
