@@ -6,7 +6,7 @@ const { auth } = require("../middlewares/auth")
 const { createProduct, editProduct , deleteProduct , getProduct, getAllProducts ,paginatedResults } = require("../controllers/productController")
 
 
-router.post("/create",createProduct)
+router.post("/create",(req, res, next) => auth(req, res, next, ['user']),createProduct)
 
 router.get("/productPage",(req, res, next) => auth(req, res, next, ['user']),paginatedResults )
 
