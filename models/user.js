@@ -32,6 +32,9 @@ const { DataTypes} = require("sequelize");
         updatedAt: false,
     }
     );
+
+    //this is to clear the databse 
+
     // User.sync({
     //     force: true
     // })
